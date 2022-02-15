@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OpenCSVReadWrite {
+public class OpenCSVWrite {
 
     private static final String FILE_NAME = "news.csv";
 

@@ -29,6 +29,4 @@ public class NewsFinderController {
         return ResponseEntity.accepted().build();
     }
 
-    //TODO controller test
-
 }

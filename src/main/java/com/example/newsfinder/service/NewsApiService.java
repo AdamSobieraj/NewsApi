@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-import static com.example.newsfinder.readWriteCSV.OpenCSVReadWrite.wtriteWithOpenCSV;
+import static com.example.newsfinder.readWriteCSV.OpenCSVWrite.wtriteWithOpenCSV;
 
 @Slf4j
 @Component
