@@ -28,5 +28,7 @@ public class NewsFinderController {
         newsApiService.sendRequestForData(category, country);
         return ResponseEntity.accepted().build();
     }
+//TODO api key do propertiesów
+//TODO add date to filename
 
 }

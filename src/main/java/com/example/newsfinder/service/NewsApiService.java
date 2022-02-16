@@ -1,5 +1,6 @@
 package com.example.newsfinder.service;
 
+import com.example.newsfinder.configuration.ApplicationConfiguration;
 import com.kwabenaberko.newsapilib.NewsApiClient;
 import com.kwabenaberko.newsapilib.models.request.TopHeadlinesRequest;
 import com.kwabenaberko.newsapilib.models.response.ArticleResponse;
@@ -16,10 +17,11 @@ import static com.example.newsfinder.readWriteCSV.OpenCSVWrite.wtriteWithOpenCSV
 @RequiredArgsConstructor
 public class NewsApiService {
 
-    NewsApiClient newsApiClient = new NewsApiClient("0d55e5edf40e468d8bb5cffdb8836415");
+    private final ApplicationConfiguration applicationConfiguration;
 
     public void sendRequestForData(String category, String country) {
 
+        NewsApiClient newsApiClient = new NewsApiClient(applicationConfiguration.getApiKey());
         newsApiClient.getTopHeadlines(
                 new TopHeadlinesRequest.Builder()
                         .country(country)
@@ -43,5 +45,4 @@ public class NewsApiService {
         );
 
     }
-
 }
